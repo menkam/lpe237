@@ -72,6 +72,62 @@ const routes: Routes = [
     path: 'modifiergroupeutilisateur',
     loadChildren: () => import('./pages/groupeutilisateurs/modifiergroupeutilisateur/modifiergroupeutilisateur.module').then( m => m.ModifiergroupeutilisateurPageModule)
   },
+  {
+    path: 'tabcahet',
+    loadChildren: () => import('./pages/gestions/cahets/tabcahet/tabcahet.module').then( m => m.TabcahetPageModule)
+  },
+  {
+    path: 'recettescachet',
+    loadChildren: () => import('./pages/gestions/cahets/recettescachet/recettescachet.module').then( m => m.RecettescachetPageModule)
+  },
+  {
+    path: 'depensescachet',
+    loadChildren: () => import('./pages/gestions/cahets/depensescachet/depensescachet.module').then( m => m.DepensescachetPageModule)
+  },
+  {
+    path: 'bilancachet',
+    loadChildren: () => import('./pages/gestions/cahets/bilancachet/bilancachet.module').then( m => m.BilancachetPageModule)
+  },
+  {
+    path: 'tabmomo',
+    loadChildren: () => import('./pages/gestions/momos/tabmomo/tabmomo.module').then( m => m.TabmomoPageModule)
+  },
+  {
+    path: 'comptemomo',
+    loadChildren: () => import('./pages/gestions/momos/comptemomo/comptemomo.module').then( m => m.ComptemomoPageModule)
+  },
+  {
+    path: 'bilanmomo',
+    loadChildren: () => import('./pages/gestions/momos/bilanmomo/bilanmomo.module').then( m => m.BilanmomoPageModule)
+  },
+  {
+    path: 'tabphoto',
+    loadChildren: () => import('./pages/gestions/photos/tabphoto/tabphoto.module').then( m => m.TabphotoPageModule)
+  },
+  {
+    path: 'recettephoto',
+    loadChildren: () => import('./pages/gestions/photos/recettephoto/recettephoto.module').then( m => m.RecettephotoPageModule)
+  },
+  {
+    path: 'depensephoto',
+    loadChildren: () => import('./pages/gestions/photos/depensephoto/depensephoto.module').then( m => m.DepensephotoPageModule)
+  },
+  {
+    path: 'bilanphoto',
+    loadChildren: () => import('./pages/gestions/photos/bilanphoto/bilanphoto.module').then( m => m.BilanphotoPageModule)
+  },
+  {
+    path: 'personnelle',
+    loadChildren: () => import('./pages/gestions/personnelle/personnelle.module').then( m => m.PersonnellePageModule)
+  },
+  {
+    path: 'misejours',
+    loadChildren: () => import('./pages/gestions/misejours/misejours.module').then( m => m.MisejoursPageModule)
+  },
+  {
+    path: 'enregistrer',
+    loadChildren: () => import('./pages/gestions/enregistrer/enregistrer.module').then( m => m.EnregistrerPageModule)
+  },
 ];
 
 @NgModule({

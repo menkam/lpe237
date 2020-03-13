@@ -40,6 +40,22 @@ const routes: Routes = [
     path: 'apropos',
     loadChildren: () => import('./pages/apropos/apropos.module').then( m => m.AproposPageModule)
   },
+  {
+    path: 'maintenance',
+    loadChildren: () => import('./pages/application/maintenance/maintenance.module').then( m => m.MaintenancePageModule)
+  },
+  {
+    path: 'menus',
+    loadChildren: () => import('./pages/application/menus/menus.module').then( m => m.MenusPageModule)
+  },
+  {
+    path: 'restaurerapplication',
+    loadChildren: () => import('./pages/application/restaurerapplication/restaurerapplication.module').then( m => m.RestaurerapplicationPageModule)
+  },
+  {
+    path: 'creerunpointderestauration',
+    loadChildren: () => import('./pages/application/creerunpointderestauration/creerunpointderestauration.module').then( m => m.CreerunpointderestaurationPageModule)
+  },
 ];
 
 @NgModule({

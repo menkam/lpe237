@@ -24,6 +24,10 @@ const routes: Routes = [
     path: 'resetpwd',
     loadChildren: () => import('./auth/resetpwd/resetpwd.module').then( m => m.ResetpwdPageModule)
   },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./pages/contacts/contacts.module').then( m => m.ContactsPageModule)
+  },
 ];
 
 @NgModule({

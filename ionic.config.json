@@ -1,0 +1,7 @@
+{
+  "name": "lpe237",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

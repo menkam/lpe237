@@ -12,6 +12,18 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'resetpwd',
+    loadChildren: () => import('./auth/resetpwd/resetpwd.module').then( m => m.ResetpwdPageModule)
+  },
 ];
 
 @NgModule({

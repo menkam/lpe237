@@ -50,10 +50,12 @@ const routes: Routes = [
   },
   {
     path: 'restaurerapplication',
+    // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./pages/application/restaurerapplication/restaurerapplication.module').then( m => m.RestaurerapplicationPageModule)
   },
   {
     path: 'creerunpointderestauration',
+    // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./pages/application/creerunpointderestauration/creerunpointderestauration.module').then( m => m.CreerunpointderestaurationPageModule)
   },
   {
@@ -62,14 +64,17 @@ const routes: Routes = [
   },
   {
     path: 'modifierutilisateur',
+    // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./pages/utilisateurs/modifierutilisateur/modifierutilisateur.module').then( m => m.ModifierutilisateurPageModule)
   },
   {
     path: 'nouvelgroupeutilisateur',
+    // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./pages/groupeutilisateurs/nouvelgroupeutilisateur/nouvelgroupeutilisateur.module').then( m => m.NouvelgroupeutilisateurPageModule)
   },
   {
     path: 'modifiergroupeutilisateur',
+    // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./pages/groupeutilisateurs/modifiergroupeutilisateur/modifiergroupeutilisateur.module').then( m => m.ModifiergroupeutilisateurPageModule)
   },
   {

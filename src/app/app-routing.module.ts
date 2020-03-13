@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'messagerie',
     loadChildren: () => import('./pages/messagerie/messagerie.module').then( m => m.MessageriePageModule)
   },
+  {
+    path: 'galeries',
+    loadChildren: () => import('./pages/galeries/galeries.module').then( m => m.GaleriesPageModule)
+  },
 ];
 
 @NgModule({

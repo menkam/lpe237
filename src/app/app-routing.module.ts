@@ -56,6 +56,14 @@ const routes: Routes = [
     path: 'creerunpointderestauration',
     loadChildren: () => import('./pages/application/creerunpointderestauration/creerunpointderestauration.module').then( m => m.CreerunpointderestaurationPageModule)
   },
+  {
+    path: 'nouvelutilisateur',
+    loadChildren: () => import('./pages/utilisateurs/nouvelutilisateur/nouvelutilisateur.module').then( m => m.NouvelutilisateurPageModule)
+  },
+  {
+    path: 'modifierutilisateur',
+    loadChildren: () => import('./pages/utilisateurs/modifierutilisateur/modifierutilisateur.module').then( m => m.ModifierutilisateurPageModule)
+  },
 ];
 
 @NgModule({

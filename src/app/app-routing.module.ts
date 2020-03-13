@@ -64,6 +64,14 @@ const routes: Routes = [
     path: 'modifierutilisateur',
     loadChildren: () => import('./pages/utilisateurs/modifierutilisateur/modifierutilisateur.module').then( m => m.ModifierutilisateurPageModule)
   },
+  {
+    path: 'nouvelgroupeutilisateur',
+    loadChildren: () => import('./pages/groupeutilisateurs/nouvelgroupeutilisateur/nouvelgroupeutilisateur.module').then( m => m.NouvelgroupeutilisateurPageModule)
+  },
+  {
+    path: 'modifiergroupeutilisateur',
+    loadChildren: () => import('./pages/groupeutilisateurs/modifiergroupeutilisateur/modifiergroupeutilisateur.module').then( m => m.ModifiergroupeutilisateurPageModule)
+  },
 ];
 
 @NgModule({

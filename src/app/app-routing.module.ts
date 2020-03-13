@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'contacts',
     loadChildren: () => import('./pages/contacts/contacts.module').then( m => m.ContactsPageModule)
   },
+  {
+    path: 'messagerie',
+    loadChildren: () => import('./pages/messagerie/messagerie.module').then( m => m.MessageriePageModule)
+  },
 ];
 
 @NgModule({

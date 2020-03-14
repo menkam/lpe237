@@ -11,14 +11,12 @@ export class UserGuard implements CanActivate, CanActivateChild, CanLoad {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
   }
-  canActivateChild(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+
+  canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return undefined;
   }
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
-    return true;
+
+  canLoad(route: Route, segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
+    return undefined;
   }
 }

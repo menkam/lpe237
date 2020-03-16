@@ -11,12 +11,29 @@ import {AuthenticationService} from './services/auth/authentication.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  public menus = [
+    {
+      title: 'Dashboard',
+      url: '/dashboard',
+      icon: 'home'
+    },
+    {
+      title: 'Home',
+      url: '/home',
+      icon: 'home'
+    },
+    {
+      title: 'List',
+      url: '/list',
+      icon: 'list'
+    },
+  ];
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private authService: AuthenticationService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
   ) {
     this.initializeApp();
   }
@@ -37,5 +54,17 @@ export class AppComponent {
         }
       });
     });
+  }
+
+    logout() {
+        this.authService.logout();
+    }
+
+  exitApp() {
+
+  }
+
+  selectReseau() {
+
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from '../services/auth/authentication.service';
+import {MenuController} from '@ionic/angular';
+import {User} from '../models/user';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,14 +10,24 @@ import {AuthenticationService} from '../services/auth/authentication.service';
 })
 export class DashboardPage implements OnInit {
 
-  constructor(
-      private authService: AuthenticationService,
-  ) { }
+  user: User;
+
+  constructor(private menu: MenuController, private authService: AuthenticationService) {
+    this.menu.enable(true);
+  }
 
   ngOnInit() {
   }
 
-    logout() {
-        this.authService.logout();
-    }
+  logout() {
+    this.authService.logout();
+  }
+
+  /*ionViewWillEnter() {
+    this.authService.user().subscribe(
+        user => {
+          this.user = user;
+        }
+    );
+  }*/
 }

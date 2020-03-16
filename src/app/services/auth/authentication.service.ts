@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {NavController} from '@ionic/angular';
+import {EnvService} from '../config/env.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ export class AuthenticationService {
     authenticationState = new BehaviorSubject(false);
 
     constructor(
-        private navCtrl: NavController
+        private navCtrl: NavController,
+        private env: EnvService
     ) { }
 
     login() {

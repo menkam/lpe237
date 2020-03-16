@@ -31,4 +31,8 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateForward('/dashboard');
     this.alert.presentToast('you are logged');
   }
+
+  registerModal() {
+    this.navCtrl.navigateForward('/register');
+  }
 }

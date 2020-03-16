@@ -4,6 +4,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <!--div *ngIf="user != undefined">
+    Welcome {{ user["first_name"]  }} {{ user["last_name"]  }}
+  </div-->
   <ion-button expand="block" color="secondary" (click)="logout()">Deconnexion</ion-button>
 </ion-content>

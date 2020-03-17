@@ -1,9 +1,78 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>comptemomo</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Gestion MoMo - Compte</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <div class="panel row">
+    <div class="panel-body col-xs-8 col-xs-offset-2">
+      <!--form #form="ngForm" (ngSubmit)="formCompte(form)" method="post"-->
+      <form [formGroup]="formCompte">
+        <ion-item>
+          <ion-label position="floating">Date</ion-label>
+          <ion-input formControlName="date" type="date" [class.invalid]="!formCompte.controls.date.valid && (formCompte.controls.date.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formCompte.controls.date.valid  && (formCompte.controls.date.dirty || submitAttempt)">
+          <p>Please enter a valid date.</p>
+        </ion-item>
 
+        <ion-item>
+          <ion-label position="floating">Prêt</ion-label>
+          <ion-input type="number" [value]="defaultPret" formControlName="pret" [class.invalid]="!formCompte.controls.pret.valid && (formCompte.controls.pret.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formCompte.controls.pret.valid  && (formCompte.controls.pret.dirty || submitAttempt)">
+          <p>Please enter a valid pret.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-button position="floating" class="center-block" (click)="onClickEspece()">Espèce </ion-button>
+          <ion-button position="floating" class="center-block" (click)="getVal()">valider </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="number" formControlName="espece" disabled [value]="totalEspece" [class.invalid]="!formCompte.controls.espece.valid && (formCompte.controls.espece.dirty || submitAttempt)"></ion-input>
+          <ion-label class="pull-right"> FCFA</ion-label>
+        </ion-item>
+        <ion-item *ngIf="!formCompte.controls.espece.valid  && (formCompte.controls.espece.dirty || submitAttempt)">
+          <p>Please enter a valid espece.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">CompteMomo</ion-label>
+          <ion-input type="number" formControlName="comptemomo" [class.invalid]="!formCompte.controls.comptemomo.valid && (formCompte.controls.comptemomo.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formCompte.controls.comptemomo.valid  && (formCompte.controls.comptemomo.dirty || submitAttempt)">
+          <p>Please enter a valid comptemomo.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">ComptePerso</ion-label>
+          <ion-input type="number" [value]="defaultComptePerso" formControlName="compteperso" [class.invalid]="!formCompte.controls.compteperso.valid && (formCompte.controls.compteperso.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formCompte.controls.compteperso.valid  && (formCompte.controls.compteperso.dirty || submitAttempt)">
+          <p>Please enter a valid compteperso.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Commission</ion-label>
+          <ion-input type="number" formControlName="commission" [class.invalid]="!formCompte.controls.commission.valid && (formCompte.controls.commission.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formCompte.controls.commission.valid  && (formCompte.controls.commission.dirty || submitAttempt)">
+          <p>Please enter a valid commission.</p>
+        </ion-item>
+
+        <div class="row">
+          <div class="col-xs-5 col-xs-offset-1">
+            <ion-button type="reset" expand="full" color="primary">Reset</ion-button>
+          </div>
+          <div class="col-xs-5">
+            <ion-button type="submit" [disabled]="formCompte.invalid" (click)="onSubmitFormCompte()" expand="full" color="success">Save</ion-button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </ion-content>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AlertService} from '../../../../services/config/alert.service';
 import {LoadingController, ModalController} from '@ionic/angular';
 import {GestionsmomoService} from '../../../../services/gestionsmomo.service';
+import {NavpageService} from '../../../../services/config/navpage.service';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-modale-espece',

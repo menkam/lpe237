@@ -1,6 +1,6 @@
 {
   "name": "lpe237",
-  "description": "Ionic Node.js Heroku app",
+  "description": "LPE237 project",
   "version": "0.0.1",
   "author": "MENKAM Francis",
   "homepage": "https://lpe237.herokuapp.com",
@@ -58,7 +58,6 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "LPE237 project",
   "cordova": {
     "plugins": {
       "cordova-plugin-nativestorage": {}

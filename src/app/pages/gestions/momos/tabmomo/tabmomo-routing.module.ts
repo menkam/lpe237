@@ -11,7 +11,7 @@ const routes: Routes = [
       { path: 'tab1', loadChildren: () => import('../comptemomo/comptemomo.module').then( m => m.ComptemomoPageModule)},
       { path: 'tab2', loadChildren: () => import('../bilanmomo/bilanmomo.module').then( m => m.BilanmomoPageModule)},
       { path: 'tab3', loadChildren: () => import('../bilanmomo/bilanmomo.module').then( m => m.BilanmomoPageModule)},
-      { path: '', redirectTo: '/tabmomo/tab1', pathMatch: 'full' }
+      { path: '', redirectTo: '/gestions/tabmomo/tab1', pathMatch: 'full' }
     ]
   }
 ];

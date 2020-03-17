@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tabmomo', pathMatch: 'full' },
+  { path: '', redirectTo: 'gestions', pathMatch: 'full' },
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
@@ -78,11 +78,11 @@ const routes: Routes = [
     // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./pages/groupeutilisateurs/modifiergroupeutilisateur/modifiergroupeutilisateur.module').then( m => m.ModifiergroupeutilisateurPageModule)
   },
-  /*{
+  {
     path: 'gestions',
     loadChildren: () => import('./pages/gestions/gestions-routing.module').then( m => m.GestionsRoutingModule)
-  },*/
-  {
+  },
+  /*{
     path: 'tabcahet',
     loadChildren: () => import('./pages/gestions/cahets/tabcahet/tabcahet.module').then( m => m.TabcahetPageModule)
   },
@@ -137,7 +137,7 @@ const routes: Routes = [
   {
     path: 'enregistrer',
     loadChildren: () => import('./pages/gestions/enregistrer/enregistrer.module').then( m => m.EnregistrerPageModule)
-  },
+  },*/
 ];
 
 @NgModule({

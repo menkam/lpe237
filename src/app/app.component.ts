@@ -4,6 +4,7 @@ import {NavController, Platform} from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {AuthenticationService} from './services/auth/authentication.service';
+import {AlertService} from './services/config/alert.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import {AuthenticationService} from './services/auth/authentication.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  public menus = [
+  public appPages = [
     {
       title: 'Dashboard',
       url: '/dashboard',
@@ -34,6 +35,7 @@ export class AppComponent {
     private statusBar: StatusBar,
     private authService: AuthenticationService,
     private navCtrl: NavController,
+    private alertService: AlertService
   ) {
     this.initializeApp();
   }
@@ -46,20 +48,30 @@ export class AppComponent {
       this.statusBar.overlaysWebView(true);
       // définir la barre d'état sur bleu
       this.statusBar.backgroundColorByHexString('#0000FF');
-      this.authService.authenticationState.subscribe(state => {
+      /*this.authService.authenticationState.subscribe(state => {
         if (state) {
           this.navCtrl.navigateRoot('/dashboard');
         } else {
           this.navCtrl.navigateRoot('/welcome');
         }
-      });
+      });*/
     });
   }
 
-    logout() {
-        this.authService.logout();
-    }
-
+  // When Logout Button is pressed
+  logout() {
+    this.authService.logout().subscribe(
+        data => {
+          this.alertService.presentToast(data['message']);
+        },
+        error => {
+          console.log(error);
+        },
+        () => {
+          this.navCtrl.navigateRoot('/landing');
+        }
+    );
+  }
   exitApp() {
 
   }

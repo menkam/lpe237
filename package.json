@@ -1,8 +1,9 @@
 {
   "name": "lpe237",
+  "description": "Ionic Node.js Heroku app",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "MENKAM Francis",
+  "homepage": "https://lpe237.herokuapp.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,7 +31,8 @@
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "express": "~4.4.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.20",
@@ -56,7 +58,7 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project",
+  "description": "LPE237 project",
   "cordova": {
     "plugins": {
       "cordova-plugin-nativestorage": {}

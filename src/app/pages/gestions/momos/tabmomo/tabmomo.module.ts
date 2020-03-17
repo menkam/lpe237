@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { TabmomoPageRoutingModule } from './tabmomo-routing.module';
 
 import { TabmomoPage } from './tabmomo.page';
+import {ModaleEspecePage} from '../modale-espece/modale-espece.page';
+import {ModaleUpdateMomoPage} from '../modale-update-momo/modale-update-momo.page';
 
 @NgModule({
   imports: [
